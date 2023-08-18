@@ -1,0 +1,144 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --main-color: #febd2e;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (min-width:768px) {
+    .container {
+        width: 750px;
+    }
+}
+
+@media (min-width:992px) {
+    .container {
+        width: 970px
+    }
+}
+
+@media (min-width:1200px) {
+    .container {
+        width: 1170px
+    }
+}
+
+header {
+    position: relative;
+}
+
+header .container nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid;
+}
+
+header .container nav>i {
+    color: #febd2e;
+    font-size: 22px;
+}
+
+@media (min-width:768px) {
+    header .container nav>i {
+        display: none
+    }
+}
+
+header .container nav>i:hover ul {
+    display: flex !important;
+}
+
+header .container nav h2 {
+    text-transform: capitalize;
+}
+
+header .container nav ul {
+    display: flex;
+    align-items: center;
+}
+
+@media(max-width:768px) {
+    header .container nav ul {
+        display: none
+    }
+}
+
+@media (max-width:768px) {
+    header .container nav ul {
+        position: absolute;
+        flex-direction: column;
+        width: fit-content;
+        background: silver;
+        top: 0;
+        right: 0;
+    }
+}
+
+header .container nav ul li {
+    margin: 0 10px;
+}
+
+header .container nav ul li a {
+    text-transform: capitalize;
+    color: black;
+}
+
+header .container nav ul li .active {
+    color: var(--main-color);
+}
+
+header .container nav ul li a:hover {
+    color: var(--main-color);
+}
+
+header .container nav .booking {
+    margin: 0 0 0 20px;
+}
+
+header .container nav .booking i {
+    margin: 0px 10px;
+    border: 1px solid var(--main-color);
+    padding: 5px;
+    border-radius: 50%;
+    font-size: 15px;
+}
+
+header .container nav .booking i:hover {
+    color: var(--main-color)
+}
+
+header .container nav .booking button {
+    background: var(--main-color);
+    border: none;
+    border-radius: 6px;
+    padding: 7px;
+    color: white;
+}
